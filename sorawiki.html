@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación para no programadores de la UVM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: linear-gradient(90deg, #710d7c, #54165b); /* Rojo */
+            color: white;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .sidebar {
+            width: 250px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+            flex: 0 0 250px;
+        }
+        .sidebar h3 {
+            margin-top: 0;
+            color: #a84fb2; /* Rojo */
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .sidebar ul li:hover {
+            background: #FFEBEE; /* Color suave de fondo */
+            transform: scale(1.02);
+        }
+        .content {
+            flex: 1;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+            min-width: 600px;
+        }
+        .content h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .content p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Estilos para dispositivos móviles */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .sidebar {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .content {
+                min-width: 100%;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            width: 100%;
+            padding: 40px 20px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+        .footer-section h3 {
+            color: #a84fb2; /* Morado */
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-section ul li {
+            margin-bottom: 8px;
+            cursor: pointer;
+            color: #ccc;
+            transition: color 0.3s;
+        }
+        .footer-section ul li:hover {
+            color: #fff;
+        }
+        .social-icons img {
+            width: 30px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+        .footer-bottom {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Programación para no programadores de la UVM
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <h3>Temas</h3>
+            <ul>
+                <li onclick="changeContent('Introducción')">Introducción</li>
+                <li onclick="changeContent('¿Cómo funciona?')">¿Cómo funciona?</li>
+                <li onclick="changeContent('Aplicaciones')">Aplicaciones</li>
+                <li onclick="changeContent('Limitaciones y desafíos')">Limitaciones y desafíos</li>
+                <li onclick="changeContent('Tutoriales')">Tutoriales</li>
+            </ul>
+        </div>
+        <div class="content">
+            <h2 id="content-title">Conociendo SORA</h2>
+            <p id="content-text">
+                Sora es un modelo de inteligencia artificial desarrollado por OpenAI que puede generar videos a partir de descripciones de texto. Con esta tecnología, es posible crear animaciones realistas y secuencias visuales con gran nivel de detalle. En esta sección, exploraremos cómo funciona Sora, sus aplicaciones y sus límites actuales. Descubre los diferentes temas acerca de este programa que tenemos disponibles.
+				</p>
+			<img src="grafico.png" alt="grafico" width="100" align="right">
+        </div>
+		<img src="openia.jpeg" alt="programacion" width="290" align="right"/>
+		<iframe width="360" height="155" src="https://www.youtube.com/embed/3sZy9ghvfAE?si=BkpgvGeDaOGzfgi-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+	
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li>Términos y Condiciones</li>
+                    <li>Privacidad y Políticas</li>
+                </ul>
+            </div>
+            <div class="footer-section social-icons">
+                <h3>Síguenos</h3>
+                <img src="facebook-icon.webp" alt="Facebook">
+                <img src="twitter-icon.webp" alt="Twitter">
+                <img src="instagram_icon.png" alt="Instagram">
+            </div>
+        </div>
+        <div class="footer-bottom">©️ 2025 Universidad del Valle de México</div>
+    </footer>
+
+    <script>
+        function changeContent(topic) {
+            const title = document.getElementById("content-title");
+            const text = document.getElementById("content-text");
+
+            switch(topic) {
+                case 'Introducción':
+                    title.innerHTML = "Introducción";
+                    text.innerHTML = "Innovador modelo de inteligencia artificial desarrollado por OpenAI que permite generar videos a partir de descripciones en texto. Su capacidad para crear escenas dinámicas y realistas ha abierto nuevas posibilidades en la producción de contenido digital. En esta sección, exploraremos sus características, aplicaciones y el impacto que podría tener en diversas industrias."; 
+                    break;
+                case '¿Cómo funciona?':
+                    title.innerHTML = "¿Cómo funciona?";
+                    text.innerHTML = "Utiliza redes neuronales avanzadas para interpretar el texto y generar videos que reflejen la descripción proporcionada. Emplea modelos de aprendizaje profundo entrenados en grandes volúmenes de datos para predecir y construir cada fotograma de manera coherente. Además, incorpora técnicas de procesamiento de imágenes y animación para mejorar la fluidez y la calidad visual.";
+                    break;
+                case 'Aplicaciones':
+                    title.innerHTML = "Aplicaciones";
+                    text.innerHTML = "Desde el entretenimiento y la publicidad hasta la educación y la simulación. En la industria del cine, podría facilitar la creación de efectos visuales y prototipos de escenas sin necesidad de costosas producciones. En el marketing, permitiría generar contenido publicitario personalizado en segundos. También tiene potencial en la educación, al crear videos explicativos basados en texto, y en la investigación.";
+                    break;
+                case 'Limitaciones y desafíos':
+                    title.innerHTML = "Limitaciones y desafíos";
+                    text.innerHTML = "A pesar de sus avances, enfrenta limitaciones importantes. Uno de los principales desafíos es la coherencia en videos largos, ya que puede perder detalles o generar elementos inconsistentes. También puede tener dificultades para representar conceptos abstractos o situaciones demasiado específicas. Además, existen preocupaciones éticas, como el posible uso indebido en la creación de contenido engañoso.";
+                    break;
+                case 'Tutoriales':
+                    title.innerHTML = "Tutoriales";
+                    text.innerHTML = "A continuación podrán encontrar vídeos que les ayudarán a utilizar Sora. Sigue aprendiendo con estos recursos. TUTORIAL COMPLETO SORA EN ESPAÑOL 💻 Aprende a Crear Videos con Inteligencia Artificial Paso a Paso! - URL (https://youtu.be/XfXREfX9qYk?si=MFMhQtENf_V4C-iN). SORA ya está DISPONIBLE!! 🚀 ¿Es el Mejor Generador de Videos con IA? - URL (https://youtu.be/3sZy9ghvfAE?si=_9D5kgt7kyg2FdP4).";
+                    break;
+                default:
+                    title.innerHTML = "Bienvenidos al curso";
+                    text.innerHTML = "Este curso está diseñado para quienes no tienen experiencia previa en programación y desean aprender los conceptos básicos. Con una metodología práctica y sencilla, cubriremos los fundamentos que necesitas para empezar a programar de forma efectiva.";
+            }
+        }
+    </script>
+</body>
+</html>
